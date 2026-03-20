@@ -1,9 +1,9 @@
+nome_aparelho = input("Digite o nome do aparelho: ")
+potencia = float(input(f"Digite a potência do(a) {nome_aparelho} em Watts (W): "))
+horas_dia = float(input(f"Quantas horas por dia o(a) {nome_aparelho} fica ligado(a)? "))
 
-input("Digite o nome do aparelho: ")
-float(input(f"Digite a potência do(a) em Watts (W): "))
-float(input(f"Quantas horas por dia o(a) fica ligado(a)? "))
+# O cálculo precisa ser guardado em uma variável
+consumo_mensal = (potencia * horas_dia * 30) / 1000
 
-(potencia * horas_dia * 30) / 1000
-
-print(f"\nAparelho:")
-print(f"Consumo estimado: kWh/mês")
+print(f"\nAparelho: {nome_aparelho}")
+print(f"Consumo estimado: {consumo_mensal:.2f} kWh/mês")
